@@ -1,0 +1,33 @@
+<ion-view view-title="Setting">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+         <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear" ng-click="opensearch_modal()">
+         <i class="ion-ios-search-strong"></i>
+        </button>
+        <button class="button button-icon button-clear" ng-click="openModal()">
+         <i class="ion-android-more-vertical"></i>
+        </button>
+     </ion-nav-buttons>
+     
+  <ion-content class="setting">
+     <ion-toggle ng-repeat="item in setting" ng-class="{color_notif:$index==3}">{{item.title}}</ion-toggle> 
+     <div class="your_email">
+         <p class="head">News letter</p>
+         <p>Subscribe to our list to receive all new</p>
+        <div class="list contact_us">
+            <label class="item item-input">
+            <input type="email" placeholder="Your e-mail here">
+            </label>
+        </div>
+        <a  href="#" class="button button-full button-positive add_btn">
+        SUBSCRIBE
+        </a>
+     </div>
+  </ion-content>

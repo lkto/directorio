@@ -1,0 +1,121 @@
+<ion-view view-title="Acerca de">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+         <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear" ng-click="opensearch_modal()">
+         <i class="ion-ios-search-strong"></i>
+        </button>
+        <button class="button button-icon button-clear" ng-click="openModal()">
+         <i class="ion-android-more-vertical"></i>
+        </button>
+     </ion-nav-buttons>
+     
+   <div class="bar bar-subheader shrink_head">
+       <div class="profi_img">
+         <img src="img/logoG.png"/>
+          
+           </div>
+           <div class="about_us">
+             <h3>Corporacion SIGTICS</h3>
+             <a href="www.sigtics.org" style="display: none" target="_blank">www.sigtics.org</a>
+           </div>
+           <div class="row tabs">
+              <div class="col" ng-click="chang_tab=1" ng-class="{color_tab: chang_tab==1}" >
+                <button class="button button-block button-positive">
+                 Contacto
+                </button>
+              </div>
+              <div class="col" ng-click="chang_tab=2" ng-class="{color_tab: chang_tab==2}">
+                <button class="button button-block button-positive">
+                Informacion
+                </button>
+              </div>
+              <div class="col" ng-click="chang_tab=3" ng-class="{color_tab: chang_tab==3}">
+                <button class="button button-block button-positive">
+                Equipo
+                </button>
+              </div>
+           </div>
+      </div>
+
+  <ion-content header-shrink scroll-event-interval="5" has-bouncing="false" class="about_page padding">
+  <div style="height:220px;"></div>
+  <div ng-show="chang_tab==1">
+
+  <div class="list" ng-repeat = "tel in contactoC " >
+    <a class="item item-avatar" >
+      <img src="{{tel.img}}">
+      <h2>{{tel.direccion}}</h2>
+      <p>{{tel.tipo}}</p>
+    </a>
+  </div>
+  
+   </div>
+   
+    <div ng-show="chang_tab==2">
+
+      <h3>Presentacion</h3>
+      <p style="text-align: justify;">La corporación para los sistemas integrados y gestión de las tecnologías de la información y la comunicación (SIGTICs), es una entidad que ofrece sus servicios de asesorías, capacitación, dirección y desarrollo de proyectos encaminados a las TICs.
+
+Cuenta con un grupo de profesionales capacitados en la solución de problemas de manejo de información en organizaciones y comunidades aplicando nuevas tecnologías, con criterio ético y responsabilidad social. nuestra labor está orientada a responder a necesidades y expectativas de las personas y a la generación de innovaciones.</p>
+
+<h3>Lema</h3>
+<p style="text-align: justify;">Sirviendo tecnologia, Sirviendo un futuro...</p>
+
+<h3>Mision</h3>
+<p style="text-align: justify;"> style="text-align: justify;"La corporación para los sistemas integrados y gestión de las tecnologías de la información y las comunicaciones SIGTICs, es una entidad sin animo de lucro, fundada bajo principio de compañerismo, respeto, dialogo y criticas constructivas. Nuestra misión es contribuir al desarrollo del departamento del Chocó apoyándonos en las tecnologías de la información y las comunicación (TIC), utilizándolas como herramientas fundamentales en pro del fortalecimiento de la comunidad chocoana.</p>
+
+<h3>Vision</h3>
+<p style="text-align: justify;">La vision de la corporación para los sistemas integrados y gestión de las tecnologías de la información y las comunicaciones SIGTICs, es que la tecnología llegue a todos los lugares, brindando soluciones basadas en los últimos avances tecnológicos. Ademas, consolidarnos como una de las corporaciones mas importantes a nivel nacional e internacional manteniendo una excelente reputación corporativa con responsabilidad social.</p>
+
+
+  
+   </div>
+
+  <div ng-show="chang_tab==3">
+
+  <h3>Desarrolladores</h3>
+    <div class="list" ng-repeat = "tel in desarrollo " >
+    <a class="item item-avatar" >
+      <img src="{{tel.img}}">
+      <h2>{{tel.nombre}}</h2>
+      <p>{{tel.numero}}</p>
+    </a>
+  </div>
+
+  <h3>Base de datos</h3>
+    <div class="list" ng-repeat = "tel in bd " >
+    <a class="item item-avatar" >
+      <img src="{{tel.img}}">
+      <h2>{{tel.nombre}}</h2>
+      <p>{{tel.numero}}</p>
+    </a>
+  </div>
+  <h3>Apoyo</h3>
+    <div class="list" ng-repeat = "tel in apoyo " >
+    <a class="item item-avatar" >
+      <img src="{{tel.img}}">
+      <h2>{{tel.nombre}}</h2>
+      <p>{{tel.numero}}</p>
+    </a>
+  </div>
+  <h3>Analistas</h3>
+    <div class="list" ng-repeat = "tel in analistas " >
+    <a class="item item-avatar" >
+      <img src="{{tel.img}}">
+      <h2>{{tel.nombre}}</h2>
+      <p>{{tel.numero}}</p>
+    </a>
+  </div>
+  
+   </div>
+   
+   
+  </ion-content>
+</ion-view>

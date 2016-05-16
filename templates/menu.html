@@ -1,0 +1,51 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+     <!-- <ion-nav-back-button>
+      </ion-nav-back-button>-->
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable menu_head">
+     <div class="row">
+      <div class="col col-33">
+       <div class="cir">
+         <img src="img/profile.png"/>
+       </div>
+      </div>
+      <div class="col">
+       <h3>Maikle jake</h3>
+       <p ng-click="goto('/login')">SIGN OUT</p>
+      </div>
+     </div>
+     
+    </ion-header-bar>
+    <ion-content class="ten_menu">
+      <ion-list>
+       <ion-item menu-close class="item-icon-left spec_item above_item" href="#/app/random">
+          <i class="icon ion-ios-list"></i>
+          Categorias
+        </ion-item>
+        <ion-item menu-close class="item-icon-left spec_item"  href="#/app/register">
+          <i class="icon ion-android-contact"></i>
+          Añadir Contacto
+        </ion-item>
+         <ion-item menu-close class="item-icon-left spec_item" href="#/app/contactanos">
+          <i class="icon ion-email"></i>
+         Contactanos
+        </ion-item>
+         <ion-item menu-close class="item-icon-left spec_item" href="#/app/acercade">
+          <i class="icon ion-information"></i>
+         Acerca de
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

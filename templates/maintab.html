@@ -1,0 +1,13 @@
+  <ion-modal-view class="tab_modal">
+    <ion-content>
+      <ion-list>
+          <ion-item href="#/app/random" ng-click="activeTab(1)" ng-class="{'bg_tab':color_tab==1}">
+            <i class="ion-home"></i>{{cat_color}}
+          </ion-item>
+          
+          <ion-item href="#/app/world" ng-click="activeTab(3)" ng-class="{'bg_tab':color_tab==3}">
+            <i class="ion-crop"></i>{{cat_color}}
+          </ion-item>
+      </ion-list>
+      </ion-content>
+  </ion-modal-view>

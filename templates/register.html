@@ -1,0 +1,79 @@
+  <ion-content class="login_page register">
+</br></br></br></br></br>
+
+    <form class="log_form">
+         <div class="list list-inset">
+          <label class="item item-input">
+                <i class="icon ion-person placeholder-icon"></i>
+                <input type="text" placeholder="Nomre" ng-model="nombre" id="nombre">
+          </label>
+
+          <label class="item item-input">
+            
+                <select name="categoria" id="categoria" style="color:#edb200;" ng-model="categoria" id="categoria">
+                    <option  value="" style="display:none;color:#edb200;"> Seleccionar una categoria</option>
+                    <option ng-repeat="datos in categorias" value="{{datos.id}}" > {{datos.nombre}}  </option>
+                </select>
+          </label>
+          <label class="item item-input">
+                <select name="profesion" id="profesion1" style="color:#edb200;" ng-model="profesion1" >
+                <option  value="" style="display:none;"> Seleccionar una profesion </option>
+                    <option ng-repeat="datos in profesion" value="{{datos.id}}" > {{datos.nombre}}  </option>
+                </select>
+          </label>
+
+          <label class="item item-input">
+                <i class="icon ion-arrow-right-a placeholder-icon"></i>
+                <input type="text" placeholder="Direccion" ng-model="direccion" id="direccion">
+          </label>
+          <label class="item item-input">
+                <i class="icon ion-compose placeholder-icon"></i>
+                <input type="text" placeholder="Pagina" ng-model="pagina" id="pagina">
+          </label>
+          <label class="item item-input">
+                <i class="icon ion-information placeholder-icon"></i>
+                <textarea cols="30" rows="10" placeholder="Descripcion" style="background:#000;color:#edb200; " ng-model="descripcion" id="descripcion"></textarea>
+          </label>
+
+<hr>
+            <label class="item item-input">
+                <i class="icon ion-at placeholder-icon"></i>
+                <input type="email" placeholder="e-mail" ng-model="email1" id="email1">
+            </label>
+            <label class="item item-input">
+                <i class="icon ion-at placeholder-icon"></i>
+                <input type="email" placeholder="e-mail" ng-model="email2" id="email2">
+            </label>
+            <label class="item item-input">
+                <select name="tipotel1"  style="color:#edb200;" ng-model="tipotel1" id="tipotel1">
+                <option  value="" style="display:none;"> Seleccionar un tipo de telefono </option>
+                    <option ng-repeat="datos in tipo" value="{{datos.id}}" > {{datos.nombre}}  </option>
+                </select>
+          </label>
+             <label class="item item-input">
+                <i class="icon ion-ios-telephone placeholder-icon"></i>
+                <input type="number" placeholder="123456798" ng-model="tel1" id="tel1">
+            </label>
+            <label class="item item-input">
+                <select name="tipotel2"  style="color:#edb200;" ng-model="tipotel2" id="tipotel2">
+                <option  value="" style="display:none;"> Seleccionar un tipo de telefono </option>
+                    <option ng-repeat="datos in tipo" value="{{datos.id}}" > {{datos.nombre}}  </option>
+                </select>
+          </label>
+            <label class="item item-input">
+                <i class="icon ion-ios-telephone placeholder-icon"></i>
+                <input type="number" placeholder="123456798" ng-model="tel2" id="tel2">
+            </label>
+          </div>
+          <div class="row">
+             <div class="col">
+              <button class="button button-block sign_btn" ng-click="registrar()">
+                Registrarse
+              </button>
+             </div>
+
+         </div>
+    </form>
+
+  </ion-content>
+

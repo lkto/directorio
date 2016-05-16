@@ -1,0 +1,60 @@
+<ion-view view-title="Telefonos">
+<ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+         <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear">
+         <i class="ion-ios-search-strong"></i>
+        </button>
+        <button class="button button-icon button-clear" ng-click="openModal()">
+         <i class="ion-android-more-vertical"></i>
+        </button>
+     </ion-nav-buttons>
+
+  <ion-content>
+</br>
+
+  <div class="list" ng-repeat = "tel in numeros" >
+    <a class="item item-avatar" >
+      <img src="{{tel.icono}}">
+      <h2>{{tel.telefono}}</h2>
+      <p>{{tel.tipo}}</p>
+    </a>
+  </div>
+
+
+
+
+    
+  </ion-content>
+
+
+<div class="tabs tabs-icon-only" style="background-color:#edb200;">
+  
+  <a class="tab-item"  href="#/app/detail" style="color: white; font-weight: bold;">
+    <i class="ion-iphone" ></i>
+
+  </a>
+
+    <a class="tab-item"  href="#/app/correos" style="color: white; font-weight: bold;">
+    <i class="ion-email" ></i>
+  
+  </a>
+
+    <a class="tab-item"  href="#/app/info" style="color: white; font-weight: bold;">
+    <i class="ion-information-circled" ></i>
+<!--
+    <a class="tab-item"  href="#/app/web" style="color: white; font-weight: bold;">
+    <i class="ion-ios-world" ></i>
+
+  </a>
+ -->
+
+</div>
+
+</ion-view>

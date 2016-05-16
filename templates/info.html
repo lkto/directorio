@@ -1,0 +1,68 @@
+<ion-view view-title="Informacion">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+         <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear" ng-click="opensearch_modal()">
+         <i class="ion-ios-search-strong"></i>
+        </button>
+        <button class="button button-icon button-clear" ng-click="openModal()">
+         <i class="ion-android-more-vertical"></i>
+        </button>
+     </ion-nav-buttons>
+     
+  <ion-content >
+
+      <div class="content_img">
+       <img src="{{datos[0].imagen}}"/>
+    </div>  
+  
+    <div class="det_header">
+     <h3>{{datos[0].nombre}}</h3>
+     <p class="img_date">{{datos[0].direccion}}</p>
+     <p>
+           <a href="{{datos[0].pagina}}" target="_blank">Ver Pagina</a> 
+        </p>
+
+
+    </div>
+    <div class="det_image">
+        <p>
+            {{datos[0].descripcion}}
+        </p>
+
+        
+    </div>
+ 
+  </ion-content>
+
+<div class="tabs tabs-icon-only" style="background-color:#edb200;">
+  
+  <a class="tab-item"  href="#/app/detail" style="color: white; font-weight: bold;">
+    <i class="ion-iphone" ></i>
+
+  </a>
+
+    <a class="tab-item"  href="#/app/correos" style="color: white; font-weight: bold;">
+    <i class="ion-email" ></i>
+  
+  </a>
+
+    <a class="tab-item"  href="#/app/info" style="color: white; font-weight: bold;">
+    <i class="ion-information-circled" ></i>
+   
+<!--
+    <a class="tab-item"  href="#/app/web" style="color: white; font-weight: bold;">
+    <i class="ion-ios-world" ></i>
+
+  </a>
+ -->
+
+</div>
+
+  </ion-view>

@@ -1,0 +1,41 @@
+  <ion-content class="login_page">
+  <div class="logo">
+   <img src="img/logo.png"/>
+  </div>
+    <form class="log_form">
+         <div class="list list-inset">
+            <label class="item item-input">
+                <i class="icon ion-at placeholder-icon"></i>
+                <input type="email" placeholder="e-mail">
+            </label>
+             <label class="item item-input">
+                <i class="icon ion-ios-unlocked placeholder-icon"></i>
+                <input type="password" placeholder="********">
+            </label>
+          </div>
+          <div class="row">
+             <div class="col">
+                <a href="#/register" class="button button-block sign_btn">
+                 Sign up
+                </a>
+             </div>
+             <div class="col col-25">
+               <a  href="#/app/random" class="button button-icon log_btn">
+                <i class="ion-ios-locked"></i>
+                </a>
+             </div>
+         </div>
+            <a ng-click="forget_password()"  class="button button-block button-clear skip_btn">
+            Forget password?
+            </a>
+        
+            <a href="#/app/random" class="button button-block button-clear skip_btn">
+            Skip
+            </a>
+        
+           
+         
+         <p class="note_txt">Browse featured</br>wallpapers ordered randomly</p>
+    </form>
+  </ion-content>
+

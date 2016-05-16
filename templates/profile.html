@@ -1,0 +1,53 @@
+<ion-view view-title="{{telefonos1[0].categoria}}">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+        <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+
+     
+    <div class="bar bar-subheader profil_head">
+     <div class="row">
+         <div class="col col-25 cir">
+            <img src="{{telefonos1[0].imagen_categoria}}"/>
+         </div>
+         <div class="col">
+            <p>{{telefonos1[0].categoria}}</p>
+         </div>
+       </div>
+    </div>   
+  <ion-content class="profil_images">
+    <div class="list list-inset"  >
+        <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Buscar" ng-model="busqueda">
+       </label>
+      </div>
+  <div class="list_profil">
+        <a  
+           collection-repeat="item in telefonos1 | filter: busqueda"
+           collection-item-width="'33%'"
+           collection-item-height="105"
+           ng-click="detail(item.id)"
+           ng-style="{'height':'105px','width':'33%'}"> 
+          
+          
+           <div class="cat_item" style="background:url({{item.imagen}})no-repeat; background-size:100% 100%;">
+              <div class="detail_list">
+                <h3>{{item.nombre}}</h3>
+                <p> {{item.informacion}}</p>
+              </div>
+           </div>
+        </a>
+      </div>
+
+
+
+  </ion-content>
+
+
+
+</ion-view>

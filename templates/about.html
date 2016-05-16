@@ -1,0 +1,84 @@
+<ion-view view-title="Profile">
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+         <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear" ng-click="opensearch_modal()">
+         <i class="ion-ios-search-strong"></i>
+        </button>
+        <button class="button button-icon button-clear" ng-click="openModal()">
+         <i class="ion-android-more-vertical"></i>
+        </button>
+     </ion-nav-buttons>
+     
+   <div class="bar bar-subheader shrink_head">
+       <div class="profi_img">
+         <img src="{{datos[0].imagen}}"/>
+          
+           </div>
+           <div class="about_us">
+             <h3>{{datos[0].nombre}}</h3>
+             <a href="{{datos[0].pagina}}" style="display: none" target="_blank">{{datos[0].pagina}}</a>
+           </div>
+           <div class="row tabs">
+              <div class="col" ng-click="chang_tab=1" ng-class="{color_tab: chang_tab==1}" >
+                <button class="button button-block button-positive">
+                 Telefonos
+                </button>
+              </div>
+              <div class="col" ng-click="chang_tab=2" ng-class="{color_tab: chang_tab==2}">
+                <button class="button button-block button-positive">
+                Correos
+                </button>
+              </div>
+              <div class="col" ng-click="chang_tab=3" ng-class="{color_tab: chang_tab==3}">
+                <button class="button button-block button-positive">
+                Informacion
+                </button>
+              </div>
+           </div>
+      </div>
+
+  <ion-content header-shrink scroll-event-interval="5" has-bouncing="false" class="about_page padding">
+  <div style="height:220px;"></div>
+  <div ng-show="chang_tab==1">
+
+  <div class="list" ng-repeat = "tel in numeros" >
+    <a class="item item-avatar" >
+      <img src="{{tel.icono}}">
+      <h2>{{tel.telefono}}</h2>
+      <p>{{tel.tipo}}</p>
+    </a>
+  </div>
+  
+   </div>
+   
+    <div ng-show="chang_tab==2">
+
+  <div class="list" ng-repeat = "email in correo" >
+
+    <a class="item item-avatar" >
+      <img src="img/email.png">
+      <p>{{email.correo}}</p>
+    </a>
+
+  </div>
+  
+   </div>
+
+  <div ng-show="chang_tab==3">
+
+       <p>
+            {{datos[0].descripcion}}
+        </p>
+  
+   </div>
+   
+   
+  </ion-content>
+</ion-view>

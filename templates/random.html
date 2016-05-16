@@ -1,0 +1,60 @@
+<ion-view view-title="Categorias">
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+       <!--  <button class="button button-icon button-clear" ng-click="opensearch_modal()" >
+         <i class="ion-ios-search-strong"></i>
+        </button>
+         <button class="button button-icon button-clear" ng-click="openModal()" ng-model="busqueda">
+         <i class="ion-android-more-vertical"></i>
+        </button> -->
+     </ion-nav-buttons>
+
+  <ion-content>
+
+  <div class="list list-inset"  >
+        <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Buscar" ng-model="busqueda">
+       </label>
+    </div>
+  <div class="padding">
+  <a ng-click="todos()" >
+    <div class="main_banner" style="background-image: url(img/todosC.png) !important">
+       <div class="row">
+         <div class="col col-25 cir">
+            <img src="img/logoG.png"/>
+         </div>
+         <div class="col">
+            <p>Lista General De Telefonos</p>
+         </div>
+       </div>
+    </div>
+    </a>
+   </div> 
+
+
+    <div class="list_profil">
+        <a 
+           collection-repeat="item in categorias | filter: busqueda"
+           collection-item-width="'50%'"
+           collection-item-height="160"
+           ng-click="lista(item.id)"
+           ng-style="{'height':'160px','width':'50%'}"> 
+
+           <div class="cat_item" style="background:url({{item.imagen}})no-repeat; background-size:100% 100%;">
+              <div class="detail_list">
+                <h3>{{item.nombre}}</h3>
+                <p>Total : {{item.total}}</p>
+              </div>
+              <div class="num_view">
+              </div>
+           </div>
+        </a>
+      </div>
+  </ion-content>
+</ion-view>

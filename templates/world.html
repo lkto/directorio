@@ -1,0 +1,38 @@
+<ion-view view-title="World">
+<ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+         <button class="button button-icon button-clear" ng-click="myGoBack()">
+         <i class="ion-chevron-left"></i>
+        </button>
+      </ion-nav-buttons>
+      
+
+
+  <ion-content class="world_page">
+    <div class="list list-inset"  >
+        <label class="item item-input">
+         <i class="icon ion-search placeholder-icon"></i>
+         <input type="text" placeholder="Buscar" ng-model="busqueda">
+       </label>
+    </div>
+
+  <div class="list_profil">
+        <a 
+           collection-repeat="item in categoriasTodas | filter: busqueda"
+           collection-item-width="'100%'"
+           ng-click="detail1(item.id)"
+           collection-item-height="200"> 
+
+           <div class="cat_item" style="background:url({{item.imagen}})no-repeat; background-size:100% 100%;">
+              <div class="detail_list">
+                <h3>{{item.nombre}}</h3>
+                <p>{{item.informacion}}</p>
+              </div>
+              
+           </div>
+        </a>
+      </div>
+  </ion-content>
+  
+</ion-view>
