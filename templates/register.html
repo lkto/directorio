@@ -1,4 +1,15 @@
+  
   <ion-content class="login_page register">
+  <style>
+    .log_form div.scroll{
+      margin-top: -85px !important;
+    }
+    .log_form. select{
+      background: #000;
+      border: none;
+    }
+
+  </style>
 </br></br></br></br></br>
 
     <form class="log_form">
@@ -11,7 +22,7 @@
           <label class="item item-input">
             
                 <select name="categoria" id="categoria" style="color:#edb200;" ng-model="categoria" id="categoria">
-                    <option  value="" style="display:none;color:#edb200;"> Seleccionar una categoria</option>
+                    <option  value="" style="display:none;color:#edb200;background:#000"> Seleccionar una categoria</option>
                     <option ng-repeat="datos in categorias" value="{{datos.id}}" > {{datos.nombre}}  </option>
                 </select>
           </label>
@@ -35,7 +46,7 @@
                 <textarea cols="30" rows="10" placeholder="Descripcion" style="background:#000;color:#edb200; " ng-model="descripcion" id="descripcion"></textarea>
           </label>
 
-<hr>
+
             <label class="item item-input">
                 <i class="icon ion-at placeholder-icon"></i>
                 <input type="email" placeholder="e-mail" ng-model="email1" id="email1">

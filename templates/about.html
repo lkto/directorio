@@ -49,9 +49,9 @@
   <div ng-show="chang_tab==1">
 
   <div class="list" ng-repeat = "tel in numeros" >
-    <a class="item item-avatar" >
+    <a class="item item-avatar" href="tel:+57{{tel.telefono}}" >
       <img src="{{tel.icono}}">
-      <h2>{{tel.telefono}}</h2>
+      <h2>  {{tel.telefono}}</h2>
       <p>{{tel.tipo}}</p>
     </a>
   </div>

@@ -167,6 +167,7 @@
     height: 65px;
     color: #fff;
     text-align: center !important;
+    font-weight: bold !important;
     font-weight:lighter;
     height: 65px;
     line-height: 61px;
@@ -178,7 +179,7 @@
 	min-height:64px;
 	}
 .has-header{
-	top:65px;
+	 /* top:65px; */
 	}	
 .bar .title + .buttons {
 	top: 0;

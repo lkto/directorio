@@ -182,7 +182,7 @@ angular.module('starter.controllers', [])
 
     //console.log(id);
     localStorage.setItem("id_telefono", id);
-    $location.url("app/detail");
+    $location.url("app/about");
 
 
   }
