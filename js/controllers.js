@@ -396,7 +396,7 @@ angular.module('starter.controllers', [])
    $scope.onFileSelect = function($files) {
     //$files: an array of files selected, each file has name, size, and type.
      alertify.logPosition("top right");
-      alertify.success("Enviando Archivo");
+      alertify.success("Subiendo foto....");
 
     for (var i = 0; i < $files.length; i++) {
       var $file = $files[i];
