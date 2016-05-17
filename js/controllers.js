@@ -341,7 +341,7 @@ angular.module('starter.controllers', [])
 
               //console.log(data);
 
-              if (data.error = "false"){
+              if (data.error == false){
                 //console.log ("aqui cambia");
 
                 localStorage.setItem("per_id", data.id_persona);
@@ -356,7 +356,7 @@ angular.module('starter.controllers', [])
          
 
                 alertify.logPosition("top right");
-                alertify.error("faltan datos por llenar , por favor revisar");
+                alertify.error(data.mensaje);
               }
                
 
@@ -531,7 +531,7 @@ angular.module('starter.controllers', [])
 
               //console.log(data);
 
-              if (data.error = "false"){
+              if (data.error == false){
                 //console.log ("aqui cambia");
 
                 console.log(data);
@@ -552,7 +552,7 @@ angular.module('starter.controllers', [])
               {
 
                 alertify.logPosition("top right");
-                alertify.error("faltan datos por llenar , por favor revisar");
+                alertify.error(data.mensaje);
               }
                
 
