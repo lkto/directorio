@@ -9,6 +9,11 @@
       border: none !important;
       width: 100% !important;
     }
+    .con
+    {
+      text-align: justify;
+      font-size: 12px;
+    }
 
   </style>
 </br></br></br></br></br>
@@ -23,20 +28,20 @@
           <label class="item item-input">
             
                 <select name="categoria" id="categoria" style="color:#edb200;width:100%" ng-model="categoria" id="categoria">
-                    <option  value="" style="display:none;color:#edb200;background:#000;"> Seleccionar una categoria</option>
+                    <option  value="" style="display:none;color:#edb200;background:#000;"> Seleccionar una categoría</option>
                     <option ng-repeat="datos in categorias" value="{{datos.id}}" > {{datos.nombre}}  </option>
                 </select>
           </label>
           <label class="item item-input">
                 <select name="profesion" id="profesion1" style="color:#edb200;width:100%" ng-model="profesion1" >
-                <option  value="" style="display:none;"> Seleccionar una profesion </option>
+                <option  value="" style="display:none;"> Seleccionar una profesión </option>
                     <option ng-repeat="datos in profesion" value="{{datos.id}}" > {{datos.nombre}}  </option>
                 </select>
           </label>
 
           <label class="item item-input">
                 <i class="icon ion-arrow-right-a placeholder-icon"></i>
-                <input type="text" placeholder="Direccion" ng-model="direccion" id="direccion">
+                <input type="text" placeholder="Dirección" ng-model="direccion" id="direccion">
           </label>
           <label class="item item-input">
                 <i class="icon ion-compose placeholder-icon"></i>
@@ -44,7 +49,7 @@
           </label>
           <label class="item item-input">
                 <i class="icon ion-information placeholder-icon"></i>
-                <textarea cols="30" rows="10" placeholder="Descripcion" style="background:#000;color:#edb200; " ng-model="descripcion" id="descripcion"></textarea>
+                <textarea cols="30" rows="10" placeholder="Descripción" style="background:#000;color:#edb200; " ng-model="descripcion" id="descripcion"></textarea>
           </label>
 
 
@@ -58,7 +63,7 @@
             </label>
             <label class="item item-input">
                 <select name="tipotel1"  style="color:#edb200;" ng-model="tipotel1" id="tipotel1">
-                <option  value="" style="display:none;"> Seleccionar un tipo de telefono </option>
+                <option  value="" style="display:none;"> Seleccionar un tipo de teléfono </option>
                     <option ng-repeat="datos in tipo" value="{{datos.id}}" > {{datos.nombre}}  </option>
                 </select>
           </label>
@@ -68,13 +73,19 @@
             </label>
             <label class="item item-input">
                 <select name="tipotel2"  style="color:#edb200;" ng-model="tipotel2" id="tipotel2">
-                <option  value="" style="display:none;"> Seleccionar un tipo de telefono </option>
+                <option  value="" style="display:none;"> Seleccionar un tipo de teléfono </option>
                     <option ng-repeat="datos in tipo" value="{{datos.id}}" > {{datos.nombre}}  </option>
                 </select>
           </label>
             <label class="item item-input">
                 <i class="icon ion-ios-telephone placeholder-icon"></i>
                 <input type="number" placeholder="123456798" ng-model="tel2" id="tel2">
+            </label>
+
+            <label class="con">
+             
+                 Al registrarse aceptas los términos y condiciones de esta aplicación
+
             </label>
           </div>
           <div class="row">

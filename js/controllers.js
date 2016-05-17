@@ -269,6 +269,13 @@ angular.module('starter.controllers', [])
 
 .controller('registrarControl', function($scope,$http,$location) {
 
+
+  $scope.terminos = function(){
+
+    $location.url("app/register");
+
+  }
+
     $http.get('http://directorio.sigtics.org/funciones-movil/ComboCategorias').
       then(function(response) {
  

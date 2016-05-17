@@ -152,6 +152,17 @@ $rootScope.list=[{id:"1",img:"img/002.png"},{id:"2",img:"img/003.png"},{id:"3",i
     }
   })
 
+  .state('app.terminos', {
+    url: "/terminos",
+    cache: false,
+    views: {
+      'menuContent': {
+        templateUrl: "templates/terminos.html",
+        controller: "registrarControl"
+      }
+    }
+  })
+
     .state('app.about', {
     url: "/about",
     cache: false,
