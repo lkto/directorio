@@ -1,4 +1,4 @@
-<ion-view view-title="Profile">
+<ion-view view-title="Detalles">
   <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -8,9 +8,7 @@
       </ion-nav-buttons>
       
     <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear" ng-click="opensearch_modal()">
-         <i class="ion-ios-search-strong"></i>
-        </button>
+  
         <button class="button button-icon button-clear" ng-click="openModal()">
          <i class="ion-android-more-vertical"></i>
         </button>
@@ -62,7 +60,7 @@
 
   <div class="list" ng-repeat = "email in correo" >
 
-    <a class="item item-avatar" >
+    <a class="item item-avatar"  href="mailto:{{email.correo}}" >
       <img src="img/email.png">
       <p>{{email.correo}}</p>
     </a>
